@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     let layout = [
-        GridItem(.adaptive(minimum: 100))
+        GridItem(.adaptive(minimum: 60, maximum: 150))
     ]
     
     var body: some View {
@@ -18,7 +18,7 @@ struct ContentView: View {
             LazyVGrid(columns: layout) {
                 ForEach(0..<1000) {
                     Text("Item, \($0)")
-//                        .font(.largeTitle)
+                        .font(.largeTitle)
                 }
             }
         }
